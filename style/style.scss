@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+::placeholder{
+    color: rgb(200, 156, 157);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    //box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html{
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+body{
+    background: url("../images/bg-pattern-desktop.svg") center no-repeat;
+    background-size: cover;
+}
+
+.logo{
+    position: absolute;
+    left: 11%;
+    //163px
+    top: 8%;
+    //67px
+    img{
+        width: 160px;
+    }
+}
+
+.pic-hero{
+    content: "";
+    position: absolute;
+    background: url("../images/hero-desktop.jpg") center no-repeat;
+    background-size: cover;
+    left: 60%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.text-hero{
+    position: absolute;
+    left: 11%;
+    //163px
+    top: 30%;
+    //234px
+    .text-hero-head{
+        width: 40%;
+        h1:first-child { 
+            color: rgb(200, 156, 157);
+            font-weight: 100;
+          }
+        h1{
+            font-size: 58px; 
+            letter-spacing: 20px;
+            text-transform: uppercase;
+            line-height: 120%;
+            font-weight: 600;
+        }
+    }
+    .text-hero-para{
+        width: 40%;
+        margin: 45px 0px;
+        p{
+            color: rgb(200, 156, 157);
+            line-height: 160%;
+        }
+    }
+    form{
+        width: 40%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        border: solid 1px rgba(200, 156, 157, 0.3);
+        border-radius: 50px 50px 50px 50px;
+        input{
+            padding: 15px;
+            border: none;
+            width: 80%;
+            border-radius: 50px 0px 0px 50px;
+            outline: none;
+        }
+        i{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+            text-align: center;
+            height: 100%;
+            width: 20%;
+            border: none;
+            border-radius: 50px 50px 50px 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .logo{
+        top: 5%;
+        img{
+            width: 100px;
+        }
+    }
+    .pic-hero{
+        content: "";
+        position: absolute;
+        background: url("../images/hero-mobile.jpg") center no-repeat;
+        background-size: cover;
+        left: 0;
+        top: 13%;
+        bottom: 60%;
+        right: 0;
+    }
+    .text-hero{
+        padding: 11%;
+        text-align: center;
+        top: 40%;
+        left: 0;
+        .text-hero-head{
+            width: 100%;
+            h1{
+                font-size: 28px;
+                letter-spacing: 10px;
+            }
+        }
+        .text-hero-para{
+            width: 100%;
+            margin: 35px 0px;
+        }
+        form{
+            width: 100%;
+        }
+    }
+}
